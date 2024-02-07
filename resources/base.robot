@@ -5,6 +5,7 @@ Library                                      Browser
 Library                                      libs/Account.py
 
 Resource                                     pagesObjects/CadastroPage.robot
+Resource                                     pagesObjects/LoginPage.robot
 
 
 *** Keywords ***

@@ -32,3 +32,14 @@ Quando eu clicar em "Cadastrar"
 Então devo ser cadastrado e enviado para a página inicial do site
     Wait For Elements State            xpath=//a[text()="Home"]           visible            5
     Get Text                           xpath=//a[text()="Home"]           equal              Home
+
+######## Checkbox admin #######
+E informo cadastro como administrador na checkbox
+    Click                              id=administrador
+
+
+Então o site deve retornar a mensagem de email já utilizado
+    ${message}                         Set Variable                                           Este email já está sendo usado
+
+    Wait For Elements State            xpath=//span[text()="${message}"]                      visible            5
+    Get Text                           xpath=//span[text()="${message}"]                      equal              ${message}
